@@ -2,7 +2,6 @@ package com.example.demo.prices.domain.model;
 
 import java.time.LocalDateTime;
 
-import lombok.Getter;
 
 public class PriceQuery {
 

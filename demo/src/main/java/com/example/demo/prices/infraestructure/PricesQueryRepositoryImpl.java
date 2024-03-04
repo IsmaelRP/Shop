@@ -15,7 +15,7 @@ import lombok.RequiredArgsConstructor;
 
 @Repository
 @RequiredArgsConstructor
-public class PriceQueryRepositoryImpl implements PriceQueryRepository {
+public class PricesQueryRepositoryImpl implements PriceQueryRepository {
 
 	@Autowired
 	private PricesH2Repository pricesH2Repository;
@@ -30,7 +30,7 @@ public class PriceQueryRepositoryImpl implements PriceQueryRepository {
                 p.getPrice(),
                 p.getStartDate(),
                 p.getEndDate()
-        ));
+        	)).map(Optional::of).orElse(Optional.empty());
     }
 	
 }

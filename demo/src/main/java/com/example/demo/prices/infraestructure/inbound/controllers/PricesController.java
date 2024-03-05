@@ -36,7 +36,7 @@ public class PricesController {
     											@RequestParam LocalDateTime application){
 
 
-    	Optional<PriceQuery> priceQueryOptional = this.pricesUseCase.findAllPosts(application, product_id, subsidiary_id);
+    	Optional<PriceQuery> priceQueryOptional = this.pricesUseCase.findPriceByDate(application, product_id, subsidiary_id);
     	
         if (priceQueryOptional.isPresent()) {
         	logger.info("Price controller - findPrice successful");

@@ -11,6 +11,9 @@ public class PriceQuery {
 	private LocalDateTime startDate;
 	private LocalDateTime endDate;
 	
+	public PriceQuery() {
+	}
+	
 	public PriceQuery(int productId, short brandId, float price, LocalDateTime startDate, LocalDateTime endDate) {
 		this.productId = productId;
 		this.brandId = brandId;

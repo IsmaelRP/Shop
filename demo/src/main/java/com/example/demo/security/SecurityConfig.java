@@ -19,7 +19,7 @@ class SecurityConfig {
     JWTAuthorizationFilter jwtAuthorizationFilter;
 
     @Bean
-    public SecurityFilterChain configure(HttpSecurity http) throws Exception {
+    SecurityFilterChain configure(HttpSecurity http) throws Exception {
 
         http
                 .csrf((csrf) -> csrf

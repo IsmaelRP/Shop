@@ -15,7 +15,7 @@ public class ObtainPriceUseCase {
 	@Autowired
 	private PriceQueryRepository priceQueryRepository;
 
-    public Optional<PriceQuery> findAllPosts(LocalDateTime application, int product_id, short subsidiary_id){
+    public Optional<PriceQuery> findPriceByDate(LocalDateTime application, int product_id, short subsidiary_id){
         return this.priceQueryRepository.findByApplicationDate(application, product_id, subsidiary_id);
     }
 
